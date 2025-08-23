@@ -41,7 +41,7 @@ footer span a:hover {
 }
 @media (max-width: 960px) {
   footer {
-    padding: 20px 0px;
+    padding: 20px 20px;
   }
   footer .email a {
     font-size: 18px;
@@ -50,6 +50,6 @@ footer span a:hover {
     font-size: 20px;
   }
   footer p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
