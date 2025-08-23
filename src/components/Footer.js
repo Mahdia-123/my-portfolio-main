@@ -9,6 +9,9 @@ export default function Footer() {
       <footer>
         <div className="grid">
           <div>
+            <Updates />
+          </div>
+          <div>
             <div class="email text-center mb-5">
               <a href="mailto:fosoonryan601@gmail.com" rel="noreferrer">
                 fosoonryan601@gmail.com
@@ -56,9 +59,6 @@ export default function Footer() {
               </span>
             </p>
             <NewDate date={new Date()} />
-          </div>
-          <div>
-            <Updates />
           </div>
         </div>
       </footer>
