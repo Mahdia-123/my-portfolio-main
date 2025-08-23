@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Updates.css";
+
 export default function Updates() {
-  const updateMessages = [
-    "🚀 New feature deployed!",
-    "🐛 Bug fix in authentication module.",
-    "⚡ Server performance improved.",
-    "🎨 Updated UI styles.",
-    "🔒 Security patch applied.",
-  ];
+  // Wrap messages in useMemo to make them stable
+  const updateMessages = useMemo(
+    () => [
+      "🚀 New feature deployed!",
+      "🐛 Bug fix in authentication module.",
+      "⚡ Server performance improved.",
+      "🎨 Updated UI styles.",
+      "🔒 Security patch applied.",
+    ],
+    []
+  );
 
   const [updates, setUpdates] = useState([]);
 
@@ -20,7 +25,8 @@ export default function Updates() {
     }, 15000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [updateMessages]); // include dependency — ESLint is happy
+
   return (
     <div className="updates-panel">
       <h2 className="title">📢 Project Updates</h2>
