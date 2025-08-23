@@ -1,0 +1,119 @@
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.grid-1-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 20px;
+}
+
+#certificates {
+  color: #f76b8a;
+  padding: 30px 50px;
+  margin-top: 70px;
+}
+
+#certificates h2 {
+  margin-top: 15px !important;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#certificates .img-fluid {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  border: 1px solid #ddd !important;
+  border-radius: 10px !important;
+  transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
+  margin-bottom: 20px;
+}
+
+#certificates .img-fluid:hover {
+  transform: scale(1.05);
+  filter: brightness(70%);
+}
+
+#certificates .certify-link {
+  color: #f76b8a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#certificates .certify-link:hover {
+  color: #66bfbf;
+  text-decoration: underline #f76b8a;
+  transition: all 300ms ease-in-out;
+}
+
+.small-image {
+  width: 380px !important;
+  height: auto !important;
+  border-radius: 10px;
+}
+
+.achievements-section h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f76b8a;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.contactLinks {
+  margin-left: 20px;
+}
+
+.contactLinks i {
+  margin: 10px;
+  font-size: 20px;
+  color: gray;
+  transition: all 300ms ease-in-out;
+}
+.contactLinks i:hover {
+  color: #f76b8a;
+}
+.toggle-theme {
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: gray;
+  transition: all 300ms ease-in-out;
+}
+.toggle-theme:hover {
+  color: #f76b8a;
+}
+.achievement-container {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+  padding: 20px;
+}
+.achievement-container.white {
+  background-color: #def7f7;
+}
+
+.achievement-container.black {
+  background-color: #191a1f;
+}
+@media (max-width: 960px) {
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+  }
+  #certificates {
+    padding: 10px 20px;
+  }
+
+  .small-image {
+    max-width: 100%;
+    height: auto;
+  }
+}

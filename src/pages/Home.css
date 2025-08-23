@@ -1,0 +1,127 @@
+.Hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("/public/images/0_HvlL9tN3FFGveFjK.jpg");
+  padding: 200px 0;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  text-align: center;
+  color: white;
+}
+
+.Hero h1 {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 30px 0;
+  color: white;
+  font-family: "PT Mono", monospace;
+}
+.Hero h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: "PT Mono", monospace;
+}
+.Hero h3 {
+  font-size: 28px;
+  font-weight: thin;
+  font-family: "PT Mono", monospace;
+  color: white !important;
+}
+.Hero .about-me a {
+  text-decoration: none;
+  color: #f76b8a;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+  line-height: 1.5;
+  padding: 20px 60px;
+  border-radius: 8px;
+  background: rgba(102, 191, 191, 0.2);
+  backdrop-filter: blur(10px);
+  font-family: "PT Mono", monospace;
+  border: 1px solid #66bfbf;
+}
+.Hero .about-me a:hover {
+  color: #66bfbf;
+  border: 1px solid#f76b8a;
+}
+
+.first-section-fluid {
+  padding: 50px;
+  color: black;
+}
+.col-md-6 {
+  margin-top: 50px;
+}
+section h1 {
+  text-align: center;
+  color: #66bfbf;
+  font-family: "PT Mono", monospace;
+}
+.first-section-fluid h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #f76b8a;
+  font-family: "PT Mono", monospace;
+}
+.first-section-fluid .img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.first-section-fluid p {
+  font-family: roboto;
+  line-height: 1.8;
+}
+.first-section-fluid a {
+  font-family: "PT Mono", monospace;
+  text-decoration: none;
+  color: #f76b8a;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+  line-height: 1.5;
+  border: 1px solid #f76b8a;
+  padding: 20px 30px;
+  border-radius: 8px;
+  background: rgba(102, 191, 191, 0.2);
+  backdrop-filter: blur(10px);
+}
+.first-section-fluid a:hover {
+  color: #66bfbf;
+  border: 1px solid#66bfbf;
+  background: rgba(247, 107, 138, 0.2);
+}
+@media (max-width: 960px) {
+  header h1 {
+    font-size: 40px;
+  }
+  header h2 {
+    font-size: 30px;
+  }
+  header h3 {
+    font-size: 20px;
+  }
+  .first-section-fluid a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .first-section-fluid h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .first-section-fluid h3 {
+    font-size: 25px;
+  }
+  .first-section-fluid p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .first-section-fluid {
+    padding: 15px;
+  }
+}

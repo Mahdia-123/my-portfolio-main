@@ -1,0 +1,48 @@
+.updates-panel {
+  width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  background: rgba(222, 247, 247, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.473);
+  color: black;
+}
+
+.title {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #66bfbf;
+}
+
+.updates-list {
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.update-item {
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, ifr);
+}
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .updates-panel {
+    max-width: 350px;
+    margin-top: 0;
+  }
+}

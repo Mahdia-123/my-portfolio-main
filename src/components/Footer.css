@@ -1,0 +1,55 @@
+.contact-links a {
+  margin-left: 30px;
+  font-size: 25px;
+  color: #ebf6f6;
+  text-decoration: none;
+}
+.contact-links a:hover {
+  color: #f76b8a;
+}
+footer {
+  padding: 30px 60px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/public/images/footer wall paper.jpg");
+  font-family: "PT Mono", monospace;
+}
+footer .email a {
+  line-height: 1.5;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ebf6f6;
+  transition: all 200ms ease-in-out;
+}
+footer .email a:hover {
+  color: #f76b8a;
+}
+
+footer p {
+  text-align: center;
+  color: #ebf6f6;
+  font-weight: bold;
+  font-size: 16px !important;
+}
+footer span a {
+  color: #ebf6f6;
+  transition: all 200ms ease-in-out;
+}
+footer span a:hover {
+  color: #f76b8a;
+}
+@media (max-width: 960px) {
+  footer {
+    padding: 20px 0px;
+  }
+  footer .email a {
+    font-size: 18px;
+  }
+  .contact-links a {
+    font-size: 20px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+}
