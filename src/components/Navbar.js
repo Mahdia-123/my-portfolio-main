@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <NavLink className="navbar-brand" to="/">
           Mahdia Khamoosh
-        </Link>
+        </NavLink>
 
         <button
           className="navbar-toggler"
@@ -19,30 +19,30 @@ export default function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
+            <li className="nav-item ">
+              <NavLink className="nav-link" to="/">
                 Home
-              </Link>
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
+            <li className="nav-item ">
+              <NavLink className="nav-link" to="/about">
                 About
-              </Link>
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/achievements">
+            <li className="nav-item ">
+              <NavLink className="nav-link" to="/achievements">
                 Achievements
-              </Link>
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/projects">
+            <li className="nav-item ">
+              <NavLink className="nav-link" to="/projects">
                 Projects
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <NavLink className="nav-link" to="/contact">
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

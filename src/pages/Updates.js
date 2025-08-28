@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./Updates.css";
 
 export default function Updates() {
-  // Wrap messages in useMemo to make them stable
   const updateMessages = useMemo(
     () => [
       "🚀 New feature deployed!",
@@ -25,7 +24,7 @@ export default function Updates() {
     }, 15000);
 
     return () => clearInterval(interval);
-  }, [updateMessages]); // include dependency — ESLint is happy
+  }, [updateMessages]);
 
   return (
     <div className="updates-panel">

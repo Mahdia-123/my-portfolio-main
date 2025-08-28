@@ -3,14 +3,14 @@
 }
 
 .navbar {
-  background: #66bfbf;
+  background: #054e4e;
 }
 .navbar a {
   color: #ebf6f6;
   font-weight: bold;
   font-family: "PT Mono", monospace;
-
-  transition: 200ms all ease-in-out;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
 }
 .navbar a:hover {
   color: #f76b8a;
