@@ -50,7 +50,7 @@ export default function Footer() {
               This website was coded by Mahdia Khamoosh and is
               <span>
                 <a
-                  href="https://github.com/Mahdia-123/mahdia-khamoosh-portfolio"
+                  href="https://github.com/Mahdia-123/my-portfolio-main"
                   rel="noreferrer"
                 >
                   {" "}
