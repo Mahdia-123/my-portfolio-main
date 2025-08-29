@@ -48,7 +48,7 @@ export default function Rating() {
               onMouseLeave={() => setHover(0)}
               style={{
                 color: currentRating <= (hover || rating) ? "#f76b8a" : "gray",
-                fontSize: "16px",
+                fontSize: "12px",
                 cursor: "pointer",
                 background: "none",
                 border: "none",

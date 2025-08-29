@@ -1,6 +1,5 @@
 .about-page {
-  background-color: #191a1f;
-  color: white;
+  color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 30px 120px;
   margin-top: 50px;
@@ -16,19 +15,19 @@
 .header-left h1 {
   font-size: 50px;
   margin-bottom: 10px;
-  color: white;
+  color: #054e4e;
   text-align: left;
   font-weight: bold;
 }
 
 .subtitle {
   font-size: 16px;
-  color: #aaa;
+  color: #333;
   margin-bottom: 16px;
 }
 
 .line {
-  color: #aaa;
+  color: #333;
   border-bottom: 1px solid #aaa;
   width: 14% !important;
   margin-bottom: 20px;
@@ -44,26 +43,26 @@
 
 .resume-btn {
   padding: 8px 14px;
-  border: 1px solid #3ea6ff;
+  border: 1px solid #054e4e;
   border-radius: 5px;
-  color: #3ea6ff;
+  color: #054e4e;
   text-decoration: none;
   font-size: 14px;
   transition: all 300ms ease-in-out;
 }
 
 .resume-btn:hover {
-  color: white;
+  color: gray;
 }
 
 .social-links i {
   font-size: 20px;
   margin-left: 8px;
-  color: #aaa;
+  color: #054e4e;
   transition: transform all 03ms ease-in-out;
 }
 .social-links i:hover {
-  color: white;
+  color: gray;
   transform: scale(1.1);
 }
 .header-right .profile-pic {
@@ -71,6 +70,7 @@
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  border: #054e4e 1px solid;
 }
 
 .about-me {
@@ -80,6 +80,7 @@
 .about-me h2 {
   margin-bottom: 5px;
   font-size: 28px;
+  color: #054e4e;
 }
 
 .about-me p {
@@ -102,17 +103,18 @@
 
 .my-skills .img {
   max-width: 100%;
-  box-shadow: 0 4px 4px rgba(255, 253, 253, 0.803);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .skills-h1 {
   text-align: left;
-  color: #a6ff01;
+  color: #054e4e;
 }
 .my-skills li {
   line-height: 1.5;
   font-size: 18px !important;
   margin-top: 30px;
+  color: black;
 }
 @media screen and (max-width: 980px) {
   .about-page {

@@ -57,9 +57,8 @@ header {
   max-width: 100%;
   border-radius: 10px;
   margin-bottom: 14px;
-  aspect-ratio: 9 / 9;
-
   display: block;
+  aspect-ratio: 9 / 9;
 }
 .comming-title {
   color: #93b554;
@@ -88,11 +87,12 @@ header {
 }
 .project h1 {
   color: #f76b8a;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "PT Mono", monospace;
   font-weight: bold !important;
   margin-top: 50px;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 50px;
 }
 .projects-grid {
   display: grid;
@@ -120,18 +120,19 @@ header {
   max-width: 100%;
   border-radius: 10px;
   margin-bottom: 12px;
+  aspect-ratio: 7/ 7;
 }
 
 .heading {
   color: #f76b8a;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   font-family: "PT Mono", monospace;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 .subtitle {
   color: gray;
-  font-size: 16px;
+  font-size: 14px;
 }
 .project-link {
   display: inline-block;

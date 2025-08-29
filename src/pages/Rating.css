@@ -1,11 +1,12 @@
 .btn {
-  color: gray !important;
+  color: #054e4e !important;
   font-size: 16px;
   font-weight: bold;
   display: block;
   margin: 0 auto;
-  margin-top: 5px;
+
   font-family: "PT Mono", monospace;
+  margin-bottom: 0 !important;
 }
 .btn:hover {
   color: #f76b8a !important;
@@ -14,10 +15,10 @@
 }
 h3 {
   text-align: center;
-  color: gray !important;
+  color: #054e4e !important;
   margin-top: 10px;
   font-weight: 200 !important;
-  font-size: 25px !important;
+  font-size: 20px !important;
 }
 .rating-container {
   text-align: center;
