@@ -8,7 +8,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const [submittedName, setSubmittedName] = useState(""); // store name after submit
+  const [submittedName, setSubmittedName] = useState("");
   const [loading, setLoading] = useState(false);
 
   // error states
@@ -58,11 +58,10 @@ export default function Contact() {
     setLoading(true);
 
     setTimeout(() => {
-      setSubmittedName(name); // store before clearing
+      setSubmittedName(name);
       setSubmitted(true);
       setLoading(false);
 
-      // clear inputs
       setName("");
       setEmail("");
       setMessage("");
@@ -94,7 +93,6 @@ export default function Contact() {
             method="POST"
             className="contact-form"
           >
-            {/* Name */}
             <label htmlFor="name">
               Name<span>*</span>
             </label>
@@ -112,7 +110,6 @@ export default function Contact() {
               </p>
             )}
 
-            {/* Email */}
             <label htmlFor="email">
               Email<span>*</span>
             </label>
@@ -131,7 +128,6 @@ export default function Contact() {
               </p>
             )}
 
-            {/* Message */}
             <label htmlFor="message">
               Message<span>*</span>
             </label>
