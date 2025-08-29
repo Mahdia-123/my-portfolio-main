@@ -16,20 +16,26 @@ export default function Contact() {
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
 
+  // touched states
+  const [touched, setTouched] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
   // email validation
   useEffect(() => {
-    const handler = setTimeout(() => {
-      if (email && !email.includes("@")) {
-        setEmailError("Email must include @");
-      } else {
-        setEmailError("");
-      }
-    }, 400);
-    return () => clearTimeout(handler);
-  }, [email]);
+    if (!touched.email) return; // skip until user touches
+    if (email && !email.includes("@")) {
+      setEmailError("Email must include @");
+    } else {
+      setEmailError("");
+    }
+  }, [email, touched.email]);
 
   // name validation
   useEffect(() => {
+    if (!touched.name) return;
     if (name.trim() === "") {
       setNameError("Name is required");
     } else if (name.length < 2) {
@@ -37,10 +43,11 @@ export default function Contact() {
     } else {
       setNameError("");
     }
-  }, [name]);
+  }, [name, touched.name]);
 
   // message validation
   useEffect(() => {
+    if (!touched.message) return;
     if (message.trim() === "") {
       setMessageError("Message is required");
     } else if (message.length < 10) {
@@ -48,10 +55,13 @@ export default function Contact() {
     } else {
       setMessageError("");
     }
-  }, [message]);
+  }, [message, touched.message]);
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    // force show errors if fields are empty
+    setTouched({ name: true, email: true, message: true });
 
     if (nameError || emailError || messageError) return;
 
@@ -62,6 +72,7 @@ export default function Contact() {
       setSubmitted(true);
       setLoading(false);
 
+      // clear inputs
       setName("");
       setEmail("");
       setMessage("");
@@ -93,6 +104,7 @@ export default function Contact() {
             method="POST"
             className="contact-form"
           >
+            {/* Name */}
             <label htmlFor="name">
               Name<span>*</span>
             </label>
@@ -103,13 +115,15 @@ export default function Contact() {
               placeholder="Your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              onBlur={() => setTouched((prev) => ({ ...prev, name: true }))}
             />
-            {nameError && (
+            {touched.name && nameError && (
               <p style={{ color: "red", fontSize: "12px", marginTop: "0" }}>
                 {nameError}
               </p>
             )}
 
+            {/* Email */}
             <label htmlFor="email">
               Email<span>*</span>
             </label>
@@ -121,13 +135,15 @@ export default function Contact() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              onBlur={() => setTouched((prev) => ({ ...prev, email: true }))}
             />
-            {emailError && (
+            {touched.email && emailError && (
               <p style={{ color: "red", fontSize: "12px", marginTop: "0" }}>
                 {emailError}
               </p>
             )}
 
+            {/* Message */}
             <label htmlFor="message">
               Message<span>*</span>
             </label>
@@ -138,8 +154,9 @@ export default function Contact() {
               required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              onBlur={() => setTouched((prev) => ({ ...prev, message: true }))}
             />
-            {messageError && (
+            {touched.message && messageError && (
               <p style={{ color: "red", fontSize: "12px", marginTop: "0" }}>
                 {messageError}
               </p>
