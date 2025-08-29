@@ -27,7 +27,7 @@ export default function Qoutes() {
                 options={{
                   strings: [`"${quote}"`],
                   autoStart: true,
-                  delay: 60, // typing speed
+                  delay: 60,
                   pauseFor: 4000,
                   loop: true,
                   cursor: "",
