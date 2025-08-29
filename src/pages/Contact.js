@@ -23,9 +23,33 @@ export default function Contact() {
     message: false,
   });
 
+  //  Load saved values from localStorage
+  useEffect(() => {
+    const savedName = localStorage.getItem("contact_name");
+    const savedEmail = localStorage.getItem("contact_email");
+    const savedMessage = localStorage.getItem("contact_message");
+
+    if (savedName) setName(savedName);
+    if (savedEmail) setEmail(savedEmail);
+    if (savedMessage) setMessage(savedMessage);
+  }, []);
+
+  // Save values to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("contact_name", name);
+  }, [name]);
+
+  useEffect(() => {
+    localStorage.setItem("contact_email", email);
+  }, [email]);
+
+  useEffect(() => {
+    localStorage.setItem("contact_message", message);
+  }, [message]);
+
   // email validation
   useEffect(() => {
-    if (!touched.email) return; // skip until user touches
+    if (!touched.email) return;
     if (email && !email.includes("@")) {
       setEmailError("Email must include @");
     } else {
@@ -60,7 +84,6 @@ export default function Contact() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    // force show errors if fields are empty
     setTouched({ name: true, email: true, message: true });
 
     if (nameError || emailError || messageError) return;
@@ -72,10 +95,13 @@ export default function Contact() {
       setSubmitted(true);
       setLoading(false);
 
-      // clear inputs
+      // clear inputs + localStorage
       setName("");
       setEmail("");
       setMessage("");
+      localStorage.removeItem("contact_name");
+      localStorage.removeItem("contact_email");
+      localStorage.removeItem("contact_message");
     }, 2000);
   }
 
@@ -104,7 +130,6 @@ export default function Contact() {
             method="POST"
             className="contact-form"
           >
-            {/* Name */}
             <label htmlFor="name">
               Name<span>*</span>
             </label>
@@ -123,7 +148,6 @@ export default function Contact() {
               </p>
             )}
 
-            {/* Email */}
             <label htmlFor="email">
               Email<span>*</span>
             </label>
@@ -143,7 +167,6 @@ export default function Contact() {
               </p>
             )}
 
-            {/* Message */}
             <label htmlFor="message">
               Message<span>*</span>
             </label>
