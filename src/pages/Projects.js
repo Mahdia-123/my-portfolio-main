@@ -15,7 +15,7 @@ export default function Projects() {
       <header>
         <div className="header-grid">
           <div>
-            <h2 className="heading2">Expense Tracker App</h2>
+            <h2 className="heading1">Expense Tracker App</h2>
             <p className="mt-5">
               The Expense Tracker App is a simple and user-friendly tool
               designed to help individuals manage their daily spending. Users

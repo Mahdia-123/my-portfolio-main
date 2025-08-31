@@ -21,7 +21,7 @@ export default function About() {
 
   return (
     <div className="about-page">
-      <section className="about-header grid-2-columns">
+      <section className="about-header  grid grid-2-columns">
         <div className="header-left">
           <h1>Mahdia Khamoosh</h1>
           <p className="subtitle">Front-end developer based in Afghanistan</p>
