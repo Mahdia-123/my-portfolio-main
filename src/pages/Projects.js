@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import Navbar from "../components/Navbar";
@@ -66,16 +66,20 @@ export default function Projects() {
       <div className="project">
         <h1>Take a look at what I have been Working on!</h1>
         <div className="projects-grid">
-          {projects.map((pro) => (
-            <div className="card" key={pro.id}>
-              <Link to={`/projects/${pro.id}`}>
-                <img src={pro.img} alt={pro.title} className="img-fluid" />
+          {projects.map((project) => (
+            <div className="card" key={project.id}>
+              <Link to={`/projects/${project.id}`}>
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="img-fluid"
+                />
               </Link>
-              <h2 className="heading mb-3">{pro.title}</h2>
-              <p className="mb-2 subtitle">{pro.subTitle}</p>
+              <h2 className="heading mb-3">{project.title}</h2>
+              <p className="mb-2 subtitle">{project.subTitle}</p>
 
               <a
-                href={pro.link}
+                href={project.link}
                 target="_blank"
                 rel="noreferrer"
                 className="project-link"
